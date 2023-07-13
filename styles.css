@@ -5,8 +5,11 @@ body {
   }
   
   .banner {
-    background-color: coral;
-    color: white;
+    background-image: url('../V2G/assets/Evento-Virtual/assets/Group4.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Altura deseada del encabezado */
     padding: 10px;
     text-align: center;
   }
@@ -45,4 +48,15 @@ body {
   
   button:hover {
     background-color: tomato;
+  }
+  .image-group {
+    display: flex;
+    align-items: left;
+   
+  }
+  
+  .image-group img {
+    width: 90px;
+    height: 40px;
+    margin-right: 20px;
   }
