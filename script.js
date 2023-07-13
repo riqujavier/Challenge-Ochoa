@@ -8,3 +8,7 @@ document.getElementById("attendeeForm").addEventListener("submit", function(even
   // Asignar el año actual al elemento de HTML
   document.getElementById("year").textContent = currentYear;
   ;
+  document.getElementById("myButton").addEventListener("click", function() {
+    alert("¡Haz hecho clic en el botón!");
+  }); 
+  //Boton para el cartel de WEBINAR en el banner.
