@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'BannerBoldItalic';
+  src: url(../V2G/assets/fonts/SharpSansNo1-Bold.woff);
+}
+@font-face {
+  font-family: 'BannerSharpRegu';
+  src: url(../V2G/assets/fonts/SharpSansNo1Medium-Regular.woff);
+}
+
+@font-face {
+font-family: 'BannerSharpSansSemi';
+src: url(../V2G/assets/fonts/shsn-webfont.woff);
+}
+@font-face {
+  font-family: 'IntroProxinNovRegular';
+  src: url(../V2G/assets/fonts/proximanova-regular-webfont.woff);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0%;
@@ -6,38 +24,36 @@ body {
     
    
   }
-  @font-face {
-    font-family: 'BannerBoldItalic';
-    src: url(../V2G/assets/fonts/SharpSansNo1-Bold.woff);
-  }
-  @font-face {
-    font-family: 'BannerSharpRegu';
-    src: url(../V2G/assets/fonts/SharpSansNo1Medium-Regular.woff);
-  }
 
-@font-face {
-  font-family: 'BannerSharpSansSemi';
-  src: url(../V2G/assets/fonts/shsn-webfont.woff);
-}
-  @font-face {
-    font-family: 'IntroProxinNovRegular';
-    src: url(../V2G/assets/fonts/proximanova-regular-webfont.woff);
-  }
- 
-  
   .banner {
+    display: block;
+    align-items: center;
     font-family: 'BannerBoldItalic';
     color:#00373E ;
     background-image: url('../V2G/assets/Evento-Virtual/assets/Group4.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 200px; /* Altura deseada del encabezado */
+    height: 350px; /* Altura deseada del encabezado */
     padding: 10px;
     text-align: center;
+    width: auto;
+  }
+  button {
+  background-color: #c05100;  
+  color:white;
+  font-family: 'BannerBoldItalic';
+  font-size: 13px;
+  padding: 7px;
+  border:none;
+  border-radius: 5px;
+  }
+  h1 {
+    font-size: 40px;
   }
   h2 {
     font-family: 'BannerSharpRegu';
+    font-size: 20px;
     
   }
   
@@ -46,7 +62,7 @@ body {
     position: relative; /* permite que el grupo de fotos1 quede dentro del container*/
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 150px;
   }
   
   .intro {
@@ -54,6 +70,7 @@ body {
     font-family: 'IntroProxinNovRegular';
     padding: 1%;
     color : #405457 ; 
+    
   }
   .presenter-list {
     font-family: 'BannerSharpSansSemi';
@@ -74,6 +91,12 @@ body {
     font-family: 'BannerSharpSansSemi';
     color:#02363D;
     z-index: 1;
+    font-size: 14px ;
+   
+  }
+  .form p {
+    font-size: 20px ;
+    text-align: center;
   }
   
   input[type="text"],
@@ -91,10 +114,12 @@ body {
     margin: 0 auto; /* para centrar el boton*/
     width: 100% ;
     background-color:#02363D ;
+    font-size: 19px ;
     color: white;
     border: none;
     padding: 2%;
     cursor: pointer;
+
     
   }
   
@@ -108,9 +133,18 @@ body {
     align-items: left;
     padding: 1%;
     position: absolute;
-    top: 0;
-    left: 0;
-   
+    top: 110px;
+    left: 40px;
+    z-index: 1;
+  }
+  .image-group2 {
+    display: flex; /* estas dos lineas son para acomodar el grupo de imag en la esquina superior izquierd*/
+    align-items: left;
+    padding: 1%;
+    position: relative; 
+    bottom: 10;
+    left: 40px;
+    z-index: 1;
   }
   
   .image-group1 img {
