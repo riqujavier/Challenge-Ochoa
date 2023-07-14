@@ -76,10 +76,24 @@ body {
     font-family: 'BannerSharpSansSemi';
     display: block;
     color:#02363D 100%;
+    list-style-type: none;
   }
+  .presenter-list li {
+    display: block; 
+   
+    align-items:center ;
+  }
+  .presenter-list li img {
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    padding: 10px;
+    width: 60px; /* Ajusta el ancho según sea necesario */
+    vertical-align: middle;
+  }
+  
+
   .minuscula {
+    
     font-family: 'BannerSharpRegu';
-    display: block;
     color: #021800 100% ;
   }
   
@@ -129,21 +143,21 @@ body {
   }
  
   .image-group1 {
-    display: flex; /* estas dos lineas son para acomodar el grupo de imag en la esquina superior izquierd*/
+   
     align-items: left;
     padding: 1%;
     position: absolute;
-    top: 110px;
-    left: 40px;
+    top: 130px;
+    left: 150px;
     z-index: 1;
   }
   .image-group2 {
-    display: flex; /* estas dos lineas son para acomodar el grupo de imag en la esquina superior izquierd*/
+   
     align-items: left;
     padding: 1%;
     position: relative; 
-    bottom: 10;
-    left: 40px;
+    bottom: 90px;
+    left: 150px;
     z-index: 1;
   }
   
