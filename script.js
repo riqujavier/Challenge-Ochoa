@@ -1,8 +1,41 @@
-document.getElementById("attendeeForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    // Aquí puedes agregar el código para enviar los datos del formulario al servidor
-    // por medio de AJAX, fetch, o cualquier otra técnica que prefieras.
-  })
+document.addEventListener("DOMContentLoaded", function() {
+  // Agregamos el evento de submit al formulario
+  document.getElementById("attendeeForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    /* desocultar una vez se tenga backend
+    
+    // Obtener los datos del formulario
+    const formData = new FormData(this);
+
+    // Enviar los datos al servidor
+    fetch('/submit-form', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Aquí puedes mostrar el mensaje de agradecimiento o hacer otras acciones
+      console.log(data);
+    })
+    .catch(error => {
+      console.error('Error al enviar los datos', error);
+    });
+  }); */
+
+    // Mostrar el contenedor de agradecimiento y la imagen
+    var thankYouContainer = document.getElementById("thankYouContainer");
+    var closeButton = document.getElementById("closeButton");
+    var thankYouImage = document.getElementById("thankYouImage");
+
+    closeButton.addEventListener("click", function() {
+      thankYouContainer.style.display = "none";
+    });
+
+    thankYouContainer.style.display = "flex";
+  });
+});
+
+
 
   document.getElementById("myButton").addEventListener("click", function() {
     alert("¡Haz hecho clic en el botón!");
@@ -42,6 +75,8 @@ document.getElementById("attendeeForm").addEventListener("submit", function(even
       }
     });
   });
+
+  
 
     // Obtener el año actual
     const currentYear = new Date().getFullYear();
