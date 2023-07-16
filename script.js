@@ -1,26 +1,30 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Agregamos el evento de submit al formulario
   document.getElementById("attendeeForm").addEventListener("submit", function(e) {
     e.preventDefault();
-    /* desocultar una vez se tenga backend
     
-    // Obtener los datos del formulario
     const formData = new FormData(this);
 
-    // Enviar los datos al servidor
-    fetch('/submit-form', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Aquí puedes mostrar el mensaje de agradecimiento o hacer otras acciones
-      console.log(data);
-    })
-    .catch(error => {
-      console.error('Error al enviar los datos', error);
-    });
-  }); */
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/submit-form', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // Configura el encabezado
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          const response = JSON.parse(xhr.responseText);
+          console.log(response);
+          // Aquí puedes mostrar el mensaje de agradecimiento o hacer otras acciones
+        } else {
+          console.error('Error al enviar los datos', xhr.statusText);
+        }
+      }
+    };
+
+    // Serializa el objeto FormData para enviarlo en el cuerpo de la solicitud
+    const serializedFormData = new URLSearchParams(formData).toString();
+    xhr.send(serializedFormData);
+ 
+
+ 
 
     // Mostrar el contenedor de agradecimiento y la imagen
     var thankYouContainer = document.getElementById("thankYouContainer");
