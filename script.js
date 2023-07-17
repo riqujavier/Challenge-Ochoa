@@ -1,3 +1,4 @@
+//Envio de formulario al backend
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("attendeeForm").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -6,13 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '/submit-form', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // Configura el encabezado
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // Configuración del encabezado
     xhr.onreadystatechange = function() {
       if (xhr.readyState === XMLHttpRequest.DONE) {
         if (xhr.status === 200) {
           const response = JSON.parse(xhr.responseText);
           console.log(response);
-          // Aquí puedes mostrar el mensaje de agradecimiento o hacer otras acciones
         } else {
           console.error('Error al enviar los datos', xhr.statusText);
         }
@@ -40,16 +40,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
+  //Boton para el cartel de WEBINAR en el banner.
   document.getElementById("myButton").addEventListener("click", function() {
     alert("¡Haz hecho clic en el botón!");
   }); 
-  //Boton para el cartel de WEBINAR en el banner.
 
+//API para paises del formulario
   $(document).ready(function() {
     var selectCountry = $('#country'); // Selector del elemento select
   
-    // Realizar solicitud a la API de Rest Countries
     $.ajax({
       url: 'https://restcountries.com/v3.1/all',
       type: 'GET',
@@ -82,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   
 
-    // Obtener el año actual
+    // Obtener el año actual para el footer
     const currentYear = new Date().getFullYear();
    
     document.getElementById("year").textContent = currentYear;

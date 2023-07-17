@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/riqujavier/Challenge-Ochoa2#readme",
   "dependencies": {
+    "express": "^4.18.2",
     "mysql": "^2.18.1"
   }
 }
